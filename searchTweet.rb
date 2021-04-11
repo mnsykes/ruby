@@ -3,10 +3,10 @@
 # if key doesn't exists message is displayed and 
 # user is prompted to enter another key
 
-def searchTweet(comedian)
+def searchTweet(comedian, newName)
 	loop do
 		puts "Enter a key to search for"
-		searchNum = "joke" + gets.to_s().strip()
+		searchNum = newName + gets.to_s().strip()
 		if !comedian.has_key?(searchNum)
 			puts "\n**RECORD NOT FOUND**\n"
 		elsif comedian.has_key?(searchNum)

@@ -9,6 +9,7 @@ require_relative "printTweets"
 require_relative "addTweet"
 require_relative "searchTweet"
 require_relative "deleteTweet"
+require_relative "getName"
 
 
 # Hash for Mitch Hedberg tweets
@@ -91,6 +92,7 @@ loop do
 	getComedian = gets.to_i()
 	getName(getComedian)
 	loop do 
+		newName = getName(getComedian)
 		comedian = getHash(getComedian)
 		puts "1 print tweet, 2 add tweet, 3 search, 4 delete"
 		choice = gets.to_i()
@@ -98,9 +100,9 @@ loop do
 			printf "A selection of 10 jokes by\n\n"
 			printTweets(comedian)
 		elsif choice == 2
-			addTweet(comedian)
+			addTweet(comedian, newName)
 		elsif choice == 3
-			searchTweet(comedian)
+			searchTweet(comedian, newName)
 		elsif choice == 4
 			deleteTweet(comedian)
 		else 
