@@ -89,6 +89,7 @@ loop do
 	puts "1 - Mitch Hedberg\n"
 	puts "2 - Demetri Martin\n\n"
 	getComedian = gets.to_i()
+	getName(getComedian)
 	loop do 
 		comedian = getHash(getComedian)
 		puts "1 print tweet, 2 add tweet, 3 search, 4 delete"

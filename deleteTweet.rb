@@ -1,3 +1,7 @@
+# function that will delete selected tweet 
+# if key exists record is deleted
+# if key doesn't exist error message
+
 def deleteTweet(comedian)
 	loop do
 		puts "Enter the post you want to delete. ex. 'mitch4'"

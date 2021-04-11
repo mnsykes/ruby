@@ -1,3 +1,9 @@
+# function that takes in the hash based on selected comedian
+# user can input new entry in full program user would be authenticated 
+# user can enter as many tweets as they want and the loop is exited
+# by entering 1 or blank entry
+
+
 def addTweet(comedian)
 	loop do
 		puts "Add joke (1) to exit: "

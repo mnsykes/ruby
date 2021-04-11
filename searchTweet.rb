@@ -1,3 +1,8 @@
+# function that will search hash keys
+# if key exists the key and value are returned
+# if key doesn't exists message is displayed and 
+# user is prompted to enter another key
+
 def searchTweet(comedian)
 	loop do
 		puts "Enter a key to search for"
