@@ -5,20 +5,24 @@
 
 
 def addTweet(comedian, newName)
-	loop do
-		puts "Add joke (1) to exit: "
-		# Let's print out all the Tweets from the Batman 
+	i = 0
+	nextNum = 10
+	puts "\n\nHow many tweets would you like to enter?"
+	numTweets = gets.to_i() # validates that entry is an integer
+	while i < numTweets do
+		i += 1
+		puts "\n\nAdd tweet #{i.to_s()} here: " 
 		addJokes = gets.chomp
-		# Here is another tweet added to our hash
-		if addJokes == "1" || addJokes == ""
-			break
+		if addJokes == ""
+			return
 		else
-			$nextNum += 1 # another way to increment batnum by 1, batnum is now 10 
-			nextKey = newName + $nextNum.to_s() # nextKey is now "batman10"
-			puts "\n**TWEET ADDED**\n"
-		  comedian [nextKey] = addJokes
+			nextNum += 1 # increment nextNum with each new tweet
+			nextKey = newName + nextNum.to_s() # nextKey is now mitch11 for example
+			comedian [nextKey] = addJokes # add new entry to hash
 		end
 	end
+	puts "\n**TWEET(s) SUCCESSFULLY ADDED**\n\n"
 end
+
 
 

@@ -4,8 +4,8 @@
 
 def deleteTweet(comedian)
 	loop do
-		puts "Enter the post you want to delete. ex. 'mitch4'"
-		choice = gets.strip
+		puts "Enter the post you want to delete (example, demetri8):"
+		choice = gets.strip.downcase
 		if !comedian.has_key?(choice)
 			puts "\n**NO MATCHING RECORDS**\n"
 		elsif comedian.has_key?(choice)

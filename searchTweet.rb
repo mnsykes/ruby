@@ -5,12 +5,13 @@
 
 def searchTweet(comedian, newName)
 	loop do
-		puts "Enter a key to search for"
-		searchNum = newName + gets.to_s().strip()
-		if !comedian.has_key?(searchNum)
+		puts "\n\nEnter a key to search for (example, mitch5):"
+		choice = gets.strip().downcase()
+		if !comedian.has_key?(choice)
 			puts "\n**RECORD NOT FOUND**\n"
-		elsif comedian.has_key?(searchNum)
-			search =  puts "(#{searchNum})" + " " + comedian[searchNum]
+		elsif comedian.has_key?(choice)
+			search =  "(#{choice})" + " " + comedian[choice]
+			puts "\n\nFound it!" + " " + search + "\n\n"
 			return search
 		end
 	end
