@@ -71,9 +71,7 @@ loop do
 	puts "2 - Demetri Martin\n\n"
 	puts "Make a selection: "
 	getComedian = gets.to_i()
-	if getComedian == " "
-		break
-	else
+	if getComedian == 1 || getComedian == 2
 		loop do 
 			newName = getName(getComedian)
 			comedian = getHash(getComedian)
@@ -109,6 +107,8 @@ loop do
 				break
 			end
 		end
+	else
+		puts "please make a selection"
 	end
 end
 
